@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        box-sizing: border-box;
+
+
+    }
+    :root {
+        --container-color:#1a1e21;
+        --second-color:#fd8f44;
+        --text-color:#172317;
+        --bg-color:#fff;
+    }
+
+    ::selection {
+        color: var(--bg-color);
+        background: var(--second-color);
+        
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    img {
+        width: 100%;
+    }
+    section {
+        padding: 3rem 0 2rem;
+    }
+
+    header.shadow {
+        background: #fff;
+        box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+        transition: 0.4s;
+        
+    }
+
+    header.shadow .logo {
+        color: #1a1e21;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 200;
+    }
+    .container {
+        max-width: 1068px;
+        margin:auto;
+        width: 100%;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+
+    }
+
+    .logo span {
+        color: #fd8f44;
+    }
+    .login  {
+        padding: 8px 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-radius: 4px;
+        background: #fd8f44;
+        color: #fff;
+    }
+
+    .login:hover {
+        background: hsl(24, 98%, 59%);
+        transition: 0.3s;
+    }
+
+    .home {
+        width: 100%;
+        min-height: 440px;
+        background: #1a1e21;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-text {
+        color: #fff;
+        text-align: center;
+        font-size: 0.5rem;
+        margin-top: 10%;
+        line-height: 2rem;
+    }
+
+    .home-title {
+        font-size: 3.5em;
+
+    }
+</style>
+<body>
+    <header>
+        <div class="nav container">
+            
+                <a href="/logout">logout</a>
+                
+    
+
+           
+            <a href="#" class="logo">Ikemid<span>cllpbll</span></a>
+            <a href="#" class="login">Login</a>
+          
+
+        
+            
+        </div>
+     
+    </header>
+
+    
+</body>
+</html>

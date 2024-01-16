@@ -1,0 +1,593 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxions.min.css" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        box-sizing: border-box;
+
+
+    }
+    :root {
+        --container-color:#1a1e21;
+        --second-color:#fd8f44;
+        --text-color:#172317;
+        --bg-color:#fff;
+    }
+
+    ::selection {
+        color: var(--bg-color);
+        background: var(--second-color);
+        
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    img {
+        width: 100%;
+    }
+    section {
+        padding: 3rem 0 2rem;
+    }
+
+    header.shadow {
+        background: #fff;
+        box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+        transition: 0.4s;
+        
+    }
+
+    header.shadow .logo {
+        color: #1a1e21;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 200;
+    }
+    .container {
+        max-width: 1068px;
+        margin:auto;
+        width: 100%;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+
+    }
+
+    .logo span {
+        color: #fd8f44;
+    }
+    .login  {
+        padding: 8px 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-radius: 4px;
+        background: #fd8f44;
+        color: #fff;
+    }
+
+    .login:hover {
+        background: hsl(24, 98%, 59%);
+        transition: 0.3s;
+    }
+
+    .home {
+        width: 100%;
+        min-height: 440px;
+        background: #1a1e21;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-text {
+        color: #fff;
+        text-align: center;
+        font-size: 0.5rem;
+        margin-top: 10%;
+        line-height: 2rem;
+    }
+
+    .home-title {
+        font-size: 3.5em;
+
+    }
+
+    .home-subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+        
+
+    }
+
+    .post-filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1.5rem;
+        margin-top: 2rem !important;
+    }
+
+    .filter-item {
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0 5%;
+    }
+
+    .active-filter {
+        background: hsl(24, 98%, 59%);
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 4px;
+    }
+
+    .post {
+        display: inline-flex;
+        grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+        justify-content: center;
+        gap: 1.5rem;
+        margin-left: 7%;
+       
+    }
+
+    .post-box {
+        
+        background: #fff;
+        box-shadow: 0 4px 14px hsl(355deg, 25%, 15% /10%);
+        padding: 15px;
+        border-radius: 0,5rem;
+    }
+
+    .post-img{
+        border: 1px solid black;
+        width: 90%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0.5rem;
+    }
+
+    .post-img:nth-of-type(4) {
+        width: 50%;
+    }
+
+    .post-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #1a1e21;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .post-box p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    .category {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fd8f44;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .profile-name {
+        padding-left: 2%;
+        font-size: 0.82rem;
+        font-weight: 500;
+    }
+
+    .profile-img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        border: 2px solid #fd8f44;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .footer p{
+        font-size: 0.938rem;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    .social .bx {
+        font-size: 1.4rem;
+        color: #1a1e21;
+    }
+
+    .social .bx:hover{
+        color: #fd8f44;
+        transition: 0.3s all linear;
+    }
+
+
+    /*Reponsiveness of the website*/
+
+    @media (max-width:1060px){
+        .container{
+            margin: 0 auto;
+            width: 95%;
+        }
+
+        .home-text{
+            width: 1000;
+        }
+    }
+
+    @media (max-width:800px){
+        .nav {
+            padding: 14px 0;
+        }
+
+        .post-container{
+            margin: 0 auto;
+            width: 95%;
+        }
+    }
+
+    @media (max-width:768px){
+        .nav {
+            padding: 10px 0;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+
+        .header-content {
+            margin-top: 3rem !important
+            ;
+        }
+
+        .home {
+            min-height: 380px;
+        }
+
+        .home-title {
+            font-size: 3rem;
+        }
+
+        .header-img {
+            height: 370px;
+        }
+
+        .post-header {
+            height: 435px;
+        }
+
+        .header-title {
+            width: 90%;
+            font-size: 2rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+      
+    }
+
+
+
+</style>
+<body>
+    
+    <header>
+        <div class="nav container">
+            
+            <a href="/login" class="login">Invest</a>
+           
+                
+
+            <a href="#" class="logo">Ikemid<span>cllpbll</span></a>
+            <a href="#about" class="login">About us</a>        
+            
+        </div>
+     
+    </header>
+   
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title">Indoor Power Game</h2>
+            <span class="home-subtitle">Your source of great content</span>
+        </div>
+    </section>
+
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span>
+        <span class="filter-item" data-filter="design">Design</span>
+        <span class="filter-item" data-filter="tech">Tech</span>
+        <span class="filter-item" data-filter="mobile">Mobile</span>
+        
+    </div>
+    <section class="post container">
+        <div class="post-box mobile">
+            <img src="img1.jpg" alt="" class="post-img">
+            <h2 class="category">Mobile</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+              
+                <img src="profile-1.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina </span>
+            </div>
+        </div>
+
+
+        <div class="post-box tech">
+            <video autoplay  controls  loop="" width="80%" height="50%" >
+                <source src="video3.mp4" type="video/mp4">
+            </video>
+>
+            <h2 class="category">Video</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+                <img src="profile-2.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina</span>
+            </div>
+        </div>
+
+
+        <div class="post-box mobile">
+            <img src="post-3.jpg" alt="" class="post-img">
+            <h2 class="category">Design</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+                <img src="profile-3.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina</span>
+            </div>
+        </div>
+
+
+        
+    </section>
+
+
+
+
+    <section class="post container">
+        <div class="post-box design">
+            <img src="post-4.jpg" alt="" class="post-img">
+            <h2 class="category">Design</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+                <img src="profile-1.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina </span>
+            </div>
+        </div>
+
+
+        <div class="post-box tech">
+            <video autoplay  controls  loop="" width="80%" height="50%" >
+                <source src="video4.mp4" type="video/mp4">
+            </video>
+
+           
+            <h2 class="category">Video</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+                <img src="profile-2.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina</span>
+            </div>
+        </div>
+
+
+        <div class="post-box mobile">
+            <img src="post-6.jpg" alt="" class="post-img">
+            <h2 class="category">Mobile</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+                <img src="profile-3.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina</span>
+            </div>
+        </div>
+
+
+        
+    </section>
+    
+
+
+    <section class="post container">
+        <div class="post-box design">
+            <img src="post-7.jpg" alt="" class="post-img">
+            <h2 class="category">Design</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+                <img src="profile-1.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina </span>
+            </div>
+        </div>
+
+
+        <div class="post-box tech">
+            <video autoplay  controls  loop="" width="80%" height="50%" >
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+
+            <h2 class="category">Video</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+                <img src="profile-2.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina</span>
+            </div>
+        </div>
+
+
+        <div class="post-box design">
+            <img src="post-9.jpg" alt="" class="post-img">
+            <h2 class="category">Design</h2>
+            <a href="post-page.html" class="post-title">
+                How to Create UX Design with Adobe XD <br>
+            </a>
+            <span class="post-date">19 sep 2022</span>
+            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
+                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+
+            </p>
+            <div class="profile">
+                <img src="profile-3.jpg" alt="" class="profile-img">
+                <span class="profile-name">Angelina</span>
+            </div>
+        </div>
+
+
+        
+    </section>
+
+
+
+    <div class="footer container">
+        <p>&#169; TheAccurate All right Reserved</p>
+        <div class="social">
+            <a href="#"><i class="bx bx1-facebook"></i></a>
+            <a href="#"><i class="bx bx1-twitter"></i></a>
+            <a href="#"><i class="bx bx1-Instagram"></i></a>
+            <a href="#"><i class="bx bx1-linkedin"></i></a>
+        </div>
+    </div>
+    <script   src="https://code.jquery.com/jquery-3.6.3.js"  
+     integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="  
+      crossorigin="anonymous"></script>
+      
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdeliver.net/npm/typed.js@2.0.12"></script>
+
+      <script src="blog.js"></script>
+    
+</body>
+
+<script>
+
+    $(document).ready(function(){
+        $('.filter-item').click(function(){
+            const value = $(this).attr('data-filter')
+            if(value == 'all') {
+                $('.post-box').show('1000')
+            }
+            else {
+                $('.post-box').not('.' + value).hide('1000')
+                $('.post-box').filter('.' + value).show('1000')
+            }
+        });
+        $('.filter-item').click(function(){
+            $(this).addClass("active-filter").siblings().removeClass("active-filter");
+        });
+    })
+    
+    const header = document.querySelector('header')
+    
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('shadow', window.scrollY > 0);
+    })
+  
+
+</script>
+</html>
+
+<%- include("partials/footer"); -%>
