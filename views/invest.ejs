@@ -141,31 +141,80 @@
 </style>
 <body>
     <section class="side">
-        <img src="../public/bk.png" alt="">
+        <img src="img.svg" alt="">
     </section>
 
     <section class="main">
         <div class="login-container">
-            <p class="title">Welcome back</p>
+            <p class="title">Welcome </p>
             <div class="separator"></div>
-            <p class="welcome-message">Please, provide login credential to proceed and have access to invest</p>
+            <p class="welcome-message">Please, provide your details to invest and the pbll team will get in touch with you</p>
 
             <form class="login-form">
                 <div class="form-control">
-                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="text" name="fullname" placeholder="fullname" required>
                     <i class="fas fa-user"></i>
                     <div style="color: red;" class="username error"></div>
                 </div>
                 <div class="form-control">
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="email" name="email" placeholder="email" required>
+                    <i class="fas fa-lock"></i>
+                    <div style="color: red;" class="password error"></div>
+                </div>
+                <div class="form-control">
+                    <input type="text" name="phone" placeholder="Phone number" required>
+                    <i class="fas fa-lock"></i>
+                    <div style="color: red;" class="password error"></div>
+                </div>
+                <div class="form-control">
+                    <input type="text" name="location" placeholder="your location" required>
                     <i class="fas fa-lock"></i>
                     <div style="color: red;" class="password error"></div>
                 </div>
 
-                <button class="submit">Login</button>
+                <button class="submit" style="margin-top: 10px;">Submit</button>
             </form>
         </div>
     </section>
     
 </body>
 </html> 
+<script>
+    const form = document.querySelector("form");
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+
+        e.preventDefault();
+
+        const fullname = form.fullname.value
+        const email = form.email.value
+        const phone = form.phone.value
+        const location = form.location.value
+
+        try{
+            const res = await fetch("/invest", {
+                method: "POST",
+                body: JSON.stringify({fullname, email, phone, location}),
+                headers:{'Content-Type': 'application/json'}
+
+            })
+            const data = await res.json()
+            console.log(data)
+            if(data.errors){
+                fullnameError.textContent = data.errors.fullname
+                emailError.textContent = data.errors.email
+                phoneErrors.textContent = data.errors.phone
+                locationErrors.textContent = data.errors.location
+            }
+            if(data.user){
+                location.assign("/profile")
+            }
+    } catch (err){
+        console.log(err)
+
+    }
+
+    })
+</script>

@@ -2,12 +2,14 @@ const express = require("express");
 
 const { requireAuth } = require("../middleware/authMiddleware");
 const { checkUser } = require("../middleware/authMiddleware");
-const { home, invest, postInvest } = require("../controller/userController");
+const { home, invest, postInvest, profile, home1 } = require("../controller/userController");
 
 const router = express.Router();
 
 router.get("/", home);
+router.get("/home1", home1)
 router.get("/invest", invest);
 router.post("/invest", postInvest);
+router.get("/profile", profile)
 
 module.exports = router;

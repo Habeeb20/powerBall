@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxions.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <style>
     * {
@@ -314,6 +315,28 @@
             margin-bottom: 1rem;
         }
 
+        
+    .home-text .social-media a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        background: transparent;
+        border: .2rem solid orange;
+        border-radius: 50%;
+        font-size: 2rem;
+        color: orange;
+        margin: 3rem 1.5rem 3rem 0;
+        transition: .3s ease;
+    }
+
+    .home-text .social-media a:hover {
+        background: var(--main-color);
+        color: var(--second-bg-color);
+        box-shadow: 0 0 1rem var(--main-color);
+    }
+
       
     }
 
@@ -337,35 +360,49 @@
     </header>
    
     <section class="home" id="home">
-        <div class="home-text container">
-            <h2 class="home-title">Indoor Power Game</h2>
-            <span class="home-subtitle">Your source of great content</span>
+        <div class="home-text">
+            <h2 style="margin-top: -2%;" class="home-title">Ikemidcll Sport and fitness P.Bll</h2>
+            <span class="home-subtitle">Experience a great sport</span>
+            <h2 class="h2">Ikemidcll Power Bll(P.Bll) made its global debut during the FIBO 2018
+                exhibition at the MesseGelande <br> exhibition Center in Cologne,  Germany.
+                Subsequently, in 2017, the game was granted a patient in Urkunduch,<br> Bundesrepublic, 
+                Deutschland, further solidifying its prominence significantly, it signifies the inagural 
+                 <br>professional outdoor world
+                chaimpionship thats was contested by Nigeria and Germany <br>
+           
+            </h2>
+            <div style="font-size: 30px; margin-top:8%; border-radius:15%;" class="social-media">
+                <a style="color: white; margin-top:30px; border:1px solid orange; border-radius: 20%; padding:1%; margin-right:2%" href="/facebook.com/ikemidcllp.bll"><i class="bx bxl-facebook"></i></a>
+                <a style="color: white; margin-top:30px; border:1px solid orange; border-radius: 20%; padding:1%; margin-right:2%" href="/http:google.com"><i class="bx bxl-twitter"></i></a>
+                <a style="color: white; margin-top:30px; border:1px solid orange; border-radius: 20%; padding:1%; margin-right:2%" href="/ikemidcllp.bll"><i class="bx bxl-instagram"></i></a>
+
+            </div>
         </div>
     </section>
 
     <div class="post-filter container">
         <span class="filter-item active-filter" data-filter="all">All</span>
-        <span class="filter-item" data-filter="design">Awards</span>
+        <span class="filter-item" data-filter="design">Interviews</span>
         <span class="filter-item" data-filter="tech">video</span>
         <span class="filter-item" data-filter="mobile">Pictures</span>
         
     </div>
     <section class="post container">
-        <div class="post-box mobile">
-            <img src="img1.jpg" alt="" class="post-img">
+        <div style="padding-right: 10%;" class="post-box mobile">
+            <img style="width: 140%;" src="img1.jpg" alt="" class="post-img">
             <h2 class="category">Picture</h2>
-            <a href="post-page.html" class="post-title">
-                How to Create UX Design with Adobe XD <br>
+            <a href="#" class="post-title">
+                First professional outdoor game <br>
             </a>
-            <span class="post-date">19 sep 2022</span>
-            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
-                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+            <span class="post-date">FIBO 2018</span>
+            <p>"Apart from the fact that" <br> the game makes creation for new skills.
+                it is <br> also easy to learn and get adapted to in no time. <br>I enjoy playing the game"
 
             </p>
             <div class="profile">
               
-                <img src="profile-1.jpg" alt="" class="profile-img">
-                <span class="profile-name">Angelina </span>
+                <img src="image6.jpg" alt="" class="profile-img">
+                <span class="profile-name">Victor </span>
             </div>
         </div>
 
@@ -374,19 +411,19 @@
             <video autoplay  controls  loop="" width="80%" height="50%" >
                 <source src="video3.mp4" type="video/mp4">
             </video>
->
+
             <h2 class="category">Video</h2>
-            <a href="post-page.html" class="post-title">
-                How to Create UX Design with Adobe XD <br>
+            <a href="#" class="post-title">
+                Tigers of Ghana vs Nigeria<br>
             </a>
-            <span class="post-date">19 sep 2022</span>
-            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
-                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+            <span class="post-date">27th of April 2019</span>
+            <p>"I feel so excited and delighted to be part <br> of the game played with the tigers of Ghana. <br>
+                The game was so interesting and I am so happy we defeated the <br> tigers of Ghana"
 
             </p>
             <div class="profile">
-                <img src="profile-2.jpg" alt="" class="profile-img">
-                <span class="profile-name">Angelina</span>
+                <img src="image2.jpg" alt="" class="profile-img">
+                <span class="profile-name">Micheal</span>
             </div>
         </div>
 
@@ -394,17 +431,17 @@
         <div class="post-box mobile">
             <img src="img8.jpg" alt="" class="post-img">
             <h2 class="category">Pictures</h2>
-            <a href="post-page.html" class="post-title">
-                How to Create UX Design with Adobe XD <br>
+            <a href="#" class="post-title">
+                Training session<br>
             </a>
-            <span class="post-date">19 sep 2022</span>
-            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
-                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+            <span class="post-date">19 sep 2020</span>
+            <p>"powerBall is a very skill game that requires concentration and dedication. <br> it is a nice game to play whthere as an indoor game or outdoor game<br>  
+             you will love it if you can dedicate your time for it"<br>
 
             </p>
             <div class="profile">
-                <img src="profile-3.jpg" alt="" class="profile-img">
-                <span class="profile-name">Angelina</span>
+                <img src="image7.jpg" alt="" class="profile-img">
+                <span class="profile-name">James</span>
             </div>
         </div>
 
@@ -417,19 +454,21 @@
 
     <section class="post container">
         <div class="post-box design">
-            <img src="post-4.jpg" alt="" class="post-img">
-            <h2 class="category">Design</h2>
-            <a href="post-page.html" class="post-title">
-                How to Create UX Design with Adobe XD <br>
+            <video autoplay  controls  loop="" width="80%" height="50%" >
+                <source src="video12.mp4" type="video/mp4">
+            </video>
+            <h2 class="category">interviews</h2>
+            <a href="#" class="post-title">
+                Interview session  <br>
             </a>
-            <span class="post-date">19 sep 2022</span>
-            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
-                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+            <span class="post-date">27th of April 2019</span>
+            <p>Lagos televison (LTV) had an interview <br> and a live session of the game when. <br>
+                when the lions of Nigeria<br> defeated the Tigers of Ghana in the year 2019
 
             </p>
             <div class="profile">
-                <img src="profile-1.jpg" alt="" class="profile-img">
-                <span class="profile-name">Angelina </span>
+                <img src="image5.jpg" alt="" class="profile-img">
+                <span class="profile-name">LTV news </span>
             </div>
         </div>
 
@@ -441,24 +480,25 @@
 
            
             <h2 class="category">Video</h2>
-            <a href="post-page.html" class="post-title">
-                How to Create UX Design with Adobe XD <br>
+            <a href="#" class="post-title">
+                Indoor Royal Game<br>
             </a>
-            <span class="post-date">19 sep 2022</span>
-            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
-                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+            <span class="post-date"> may 2020</span>
+            <p>"playing an idoor game for the first time is " <br> greate opportunity for me <br>
+                and one of the qualities I love about the game<br> is the provision of the creativity skills. <br>
+                I will implore Nigeria Government and Nigeria as a whole to invest in <br> the sport so as to make it a better one
 
             </p>
             <div class="profile">
-                <img src="profile-2.jpg" alt="" class="profile-img">
-                <span class="profile-name">Angelina</span>
+                <img src="image7.jpg" alt="" class="profile-img">
+                <span class="profile-name">jessica</span>
             </div>
         </div>
 
 
         <div class="post-box mobile">
             <img src="img3.jpg" alt="" class="post-img">
-            <h2 class="category">Mobile</h2>
+            <h2 class="category">Picture</h2>
             <a href="post-page.html" class="post-title">
                 How to Create UX Design with Adobe XD <br>
             </a>
@@ -481,8 +521,11 @@
 
     <section class="post container">
         <div class="post-box design">
-            <img src="post-7.jpg" alt="" class="post-img">
-            <h2 class="category">Design</h2>
+            <video autoplay  controls  loop="" width="80%" height="50%" >
+                <source src="video11.mp4" type="video/mp4">
+            </video>
+
+            <h2 class="category">Interviews</h2>
             <a href="post-page.html" class="post-title">
                 How to Create UX Design with Adobe XD <br>
             </a>
@@ -520,8 +563,11 @@
 
 
         <div class="post-box design">
-            <img src="post-9.jpg" alt="" class="post-img">
-            <h2 class="category">Design</h2>
+            <video autoplay  controls  loop="" width="80%" height="50%" >
+                <source src="video12.mp4" type="video/mp4">
+            </video>
+
+            <h2 class="category">Interviews</h2>
             <a href="post-page.html" class="post-title">
                 How to Create UX Design with Adobe XD <br>
             </a>
@@ -555,14 +601,20 @@
      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="  
       crossorigin="anonymous"></script>
       
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdeliver.net/npm/typed.js@2.0.12"></script>
-
+ 
       <script src="blog.js"></script>
     
 </body>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdeliver.net/npm/typed.js@2.0.12"></script>
 
 <script>
+    
+    
+    
+    let section = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('header nav a');
+
 
     $(document).ready(function(){
         $('.filter-item').click(function(){
@@ -586,6 +638,94 @@
         header.classList.toggle('shadow', window.scrollY > 0);
     })
   
+
+
+
+
+
+
+
+
+    
+
+        window.onscroll = () => {
+            section.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id =sec.getAttribute('id')
+                
+                if(top >= offset && top < offset + height) {
+                    navLink.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('header nav a [href*=' + id +']').classList.add('active');
+                        
+                    });
+
+                }
+            });
+        }
+
+        let headerr = document.querySelector('header');
+
+        header.classList.toggle('sticky', window.scrollY > 100);
+        ScrollReveal ({
+            //reset:true,
+            distance: '100px',
+            duration: 2000,
+            delay: 200,
+        });
+
+        ScrollReveal().reveal('.home-text', {origin:'top'});
+        ScrollReveal().reveal('.h2, .services-container, .portfolio-box, .contact form',{origin:'bottom'});
+        ScrollReveal().reveal('.home-subtitle',{origin:'right'});
+        ScrollReveal().reveal('.home-content p, .about-content',{origin:'right'});
+
+
+
+
+
+        const typed = new Typed ('.multiple-text', {
+            strings: ['web designer', 'frontend engineer', 'computer engineer'],
+            typeSpeed: 100,
+            backSpeed : 100,
+            backDelay: 1000,
+            loop: true
+        })
+
+
+
+
+
+
+        let json_url = "cvblog.json";
+
+    
+        fetch(json_url).then((Response) = Response.json())
+        .then(data => {
+             let documents= data.filter(ele => {
+                return ele.name==="CV";
+        });
+        document.getElementById('title').innerText = documents [0].name;
+        document.getElementById('waliyu1.docx').href = documents [0].low;
+        document.getElementById('gen').innerText = documents [0].genre;
+        document.getElementById('date').innerText = documents [0].date;
+        document.getElementById('rate').innerHTML = documents [0].name;
+
+
+
+    })
+
+
+
+
+
+
+
+        
+
+        
+    
 
 </script>
 </html>
