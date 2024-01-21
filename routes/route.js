@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get("/", home);
 router.get("/home1", home1)
-router.get("/invest", invest);
+router.get("/invest",   checkUser,  invest);
 router.post("/invest", postInvest);
 router.get("/profile", profile)
 

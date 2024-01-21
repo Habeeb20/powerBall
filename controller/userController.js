@@ -10,7 +10,9 @@ const home1 = async( req, res) => {
 }
 
 const invest = async(req, res) => {
-    res.render("invest")
+    res.render("invest", {
+        message:'your details has been registered'
+    })
 
 }
 
@@ -20,7 +22,6 @@ const postInvest = async(req, res) => {
     try {
         const user = await User.create({fullname, email, phone, location})
         if(user){
-            // const user = await User.find()
             res.render("profile", {
                 _id: req.params.id,
                 fullname:req.body.fullname,
@@ -33,7 +34,8 @@ const postInvest = async(req, res) => {
                 fullname:fullname,
                 email:email,
                 phone:phone,
-                location: location
+                location: location,
+                message:'your details has been registered'
     
             })
         } else {
