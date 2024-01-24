@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PowerBall</title>
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxions.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -18,6 +18,7 @@
         scroll-behavior: smooth;
         scroll-padding-top: 2rem;
         box-sizing: border-box;
+    
     
 
 
@@ -346,6 +347,97 @@
         line-height: 30px;
     }
 
+    .content{
+        position: relative;
+    }
+
+    .content h2 {
+       
+        color: #fff;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    .content h2:nth-child(1)
+    {
+        color: transparent;
+        -webkit-text-stroke: 2px #03a9f4;
+    }
+
+    .content h2:nth-child(2){
+        color: #03a9f4;
+        animation: animate 4s ease-in-out infinite;
+    }
+
+    @keyframes animate {
+        0%, 100%
+        {
+            clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%,
+            84% 59%, 100% 52%, 100% 100%, 0% 100%);
+        }
+        50%{
+            clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%,
+            84% 45%, 100% 46%, 100% 100%, 0% 100%);
+
+        }
+        
+    }
+
+    .invest {
+       
+    }
+
+    
+    .invest {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin-left: 35%;
+        padding-top: 25%;
+        padding-bottom: 25%;
+        display: flex;
+        width: 256px;
+        height: 256px;
+      }
+  
+      .invest span {
+        position: absolute;
+        left: 0;
+        width: 22px;
+        height: 6px;
+        background: #1f293a;
+        border-radius: 8px;
+        transform-origin: 128px;
+        transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+        animation: animate 3s linear infinite;
+        animation-delay: calc(var(--i) * (3s / 50));
+      }
+  
+      @keyframes animate {
+        0% {
+          background: rgb(255, 149, 0);
+        }
+        25% {
+          background: #1f293a;
+        }
+      }
+
+      .PBall button  {
+        padding: 8px 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-radius: 4px;
+        background: #fd8f44;
+        color: #fff;
+    }
+
+    .PBall button:hover {
+        background: hsl(24, 98%, 59%);
+        transition: 0.3s;
+    }
+
+
+
 
 
 </style>
@@ -354,12 +446,12 @@
     <header>
         <div class="nav container">
             
-            <a href="/login" class="login">Invest</a>
+            <a href="/login" class="login">sponsor</a>
            
                 
 
             <a href="#" class="logo">Ikemid<span>cllpbll</span></a>
-            <a href="#about" class="login">About us</a>        
+            <a href="#aboutUs" class="login">About us</a>        
             
         </div>
      
@@ -369,12 +461,19 @@
         <div class="home-text">
             <h2 style="margin-top: -2%;" class="home-title">Ikemidcll Sport and fitness P.Bll</h2>
             <span class="home-subtitle">Experience a great sport</span>
-            <h2 class="h2">Ikemidcll Power Bll(P.Bll) made its global debut during the FIBO 2018
-                exhibition at the MesseGelande <br> exhibition Center in Cologne,  Germany.
-                Subsequently, in 2017, the game was granted a patient in Urkunduch,<br> Bundesrepublic, 
-                Deutschland, further solidifying its prominence significantly, it signifies the inagural 
-                 <br>professional outdoor world
-                chaimpionship thats was contested by Nigeria and Germany <br>
+            <h2 style="padding-top: 7%;" class="h2">A beautiful innovation in a sport game. a splendid sunshine that combines contact
+                and balls. fun, sunny like the pride of the Gobi. <br>Got patented as a game, with play codes and regulations in Urkunduch, Bundesrepublik, Deutschland
+                Like the feline camaraderie, <br> growing in each other's arms, striving and bringing ourselves  from acorns
+                to oaks, from takedowns to jumps and blocks, <br> we are the many  in one, all in everything
+                New and fresh, energetic and passionate, the rhythms for the sway  of zeal, and the beauty of bodies <br> listening to inner  commands.
+                like a conifer fire, blazing brightly amongst people of wills and excellent sporting character, games <br> are currently being played in the countries.
+                since the FIBO exhibition in Germany in 2018, and the chaimpionship in 2019 where Guinness
+                book of records awarded the <br> first chaimpion of the game, The Tigers of Ghana, its been a race to Doyen.
+                Organizations with eye for potentials are currently partnering with the game, <br> games station like LTV,DBS, and daily
+                pappers like daily sun, sporting sun, sporting life, airing it to the world
+                playing to bated-breathtaking audiences at Heritage <br> African culture Revival, brings to the for, the African culture of scintillation camaraderie.
+                so we welcome you to come paticipate in the most beautiful game, <span style="color: #fd8f44; font-weight:bolder;">P.Bill</span>
+                 
            
             </h2>
             <div style="font-size: 30px; margin-top:8%; border-radius:15%;" class="social-media">
@@ -415,7 +514,7 @@
 
         <div class="post-box tech">
             <video autoplay  controls  loop="" width="80%" height="50%" >
-                <source src="video3.mp4" type="video/mp4">
+                <source src="video31.mp4" type="video/mp4">
             </video>
 
             <h2 class="category">Video</h2>
@@ -461,7 +560,7 @@
     <section class="post container">
         <div class="post-box design">
             <video autoplay  controls  loop="" width="80%" height="50%" >
-                <source src="video12.mp4" type="video/mp4">
+                <source src="video30.mp4" type="video/mp4">
             </video>
             <h2 class="category">interviews</h2>
             <a href="#" class="post-title">
@@ -528,20 +627,19 @@
     <section class="post container">
         <div class="post-box design">
             <video autoplay  controls  loop="" width="80%" height="50%" >
-                <source style="width: 50%;" src="video11.mp4" type="video/mp4">
+                <source style="width: 50%;" src="video3.mp4" type="video/mp4">
             </video>
 
-            <h2 class="category">Interviews</h2>
+            <h2 class="category">Royal Game</h2>
             <a href="#" class="post-title">
-                How to Create UX Design with Adobe XD <br>
+                Training session <br>
             </a>
-            <span class="post-date">19 sep 2022</span>
-            <p>We give adorable and beautiful designs <br> to our clients in and outside the country. <br>
-                we care so much about the satisfaction of our <br> client and the taste of their beloved ones
+            <span class="post-date">19 sep 2021</span>
+            <p>The indoor game was played during a training session <br>
 
             </p>
             <div class="profile">
-                <img src="profile-1.jpg" alt="" class="profile-img">
+                <img src="img1.jpg" alt="" class="profile-img">
                 <span class="profile-name">Angelina </span>
             </div>
         </div>
@@ -557,7 +655,7 @@
                 Germany vs Nigeria<br>
             </a>
             <span class="post-date">may 2018</span>
-            <p>its debut during the FIBO 2018 exhibition.<br> This took place in Nigeria back in the year 2018<br>
+            <p>Its debut during the FIBO 2018 exhibition.<br> This took place in Nigeria back in the year 2018<br>
         
 
             </p>
@@ -593,7 +691,7 @@
     </section>
 
 
-    <section style="background-color: rgb(8, 6, 6); color:white" class="about-us">
+    <section style="background-color: rgb(8, 6, 6); color:white" class="about-us" id="aboutUs">
         <h1 style="border-bottom:4px solid white; margin-left:45%; border: 30px; " class="About-header">
             ABOUT US
 
@@ -635,6 +733,128 @@
         </div>
     </section>
 
+
+    <section style="background-color: black; color:white; line-height:30px">
+        <div style="padding-top: 1%; margin-left:5%" class="media-coverage">
+            <h1>P.Bll  Legacy</h1>
+            <p>
+                Sponsors become part of P.Bll history, with names and pictures, enshrined as legend
+                A chance to sponsor university games, creating <br> indoor courts and organizing chaimpionships. <br> 
+            </p>
+
+        </div>
+    </section>
+
+    <h1 style="margin-left: 34%;">A call for a sponsor</h1>
+    <section class="invest">
+       
+        <span style="--i: 0"></span>
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3"></span>
+        <span style="--i: 4"></span>
+        <span style="--i: 5"></span>
+        <span style="--i: 6"></span>
+        <span style="--i: 7"></span>
+        <span style="--i: 8"></span>
+        <span style="--i: 9"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 17"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+        <span style="--i: 21"></span>
+        <span style="--i: 22"></span>
+        <span style="--i: 23"></span>
+        <span style="--i: 24"></span>
+        <span style="--i: 25"></span>
+        <span style="--i: 26"></span>
+        <span style="--i: 27"></span>
+        <span style="--i: 28"></span>
+        <span style="--i: 29"></span>
+        <span style="--i: 30"></span>
+        <span style="--i: 31"></span>
+        
+        <span style="--i: 32"></span>
+        <span style="--i: 33"></span>
+        <span style="--i: 35"></span>
+        <span style="--i: 36"></span>
+        <span style="--i: 38"></span>
+        <span style="--i: 37"></span>
+        <span style="--i: 39"></span>
+        <span style="--i: 40"></span>
+        <span style="--i: 41"> </span>
+        <span style="--i: 42"> </span>
+        <span style="--i: 43"> </span>
+        <span style="--i: 44"> </span>
+        <span style="--i: 45"> </span>
+        <span style="--i: 46"> </span>
+        <span style="--i: 47"> </span>
+        <span style="--i: 48"> </span>
+        <span style="--i: 49"> </span>
+        <span style="--i: 50"> </span>
+        <span style="--i: 51"> </span>
+
+       
+        <h4 class="pball">P.Bll has the opportunity to attract sponsors who wish
+            to associate their brand with this innovative and exciting
+            athletic endeavor. Sponsors can contribute to the development of 
+            indoor cage courts, sponsor university games, and even organize
+            chaimpionship within the campus, enhancing overall sporting experience.
+            click on the link below to sponsor the sport
+            <a class="button"  href="/login"><button style="background-color: orange;border:none; padding:3%; color:white; margin: 15%;margin-left:35%; border-radius: 15%">sponsor</button></a>
+        </h4>
+
+
+    </section>
+
+    <section  style="background-color:orange" class="gain">
+        <h1 class="gaining" style="margin-left: 30%; padding-bottom:15px ">What will you gain as an investor or sponsor?</h1>
+        <ul style="padding-left: 5%; line-height:143%">
+            <li><strong>World Tour:</strong> P.Bll is a global sport that has the capacity to content with widly popular
+                ball activities in the world.Engaging in a global tour of P.Bll <br> would enable the sponsors to
+                capitalize on the highly profitable European sports market.
+
+            </li>
+            <li>
+                <strong>Revenue sharing:</strong>A portion of the earnings generated from online
+                game activities, ticket sales, merchandise, and sponsorships will be distributed <br> to investors
+                and sponsors. The implementation of this revenue-sharing model guarantees a symbiotic partnership.
+
+
+            </li>
+
+            <li>
+                <strong>Marketing and advertising:</strong>Leverage the potential of social media platforms
+                to achieve worldwide recognition, resulting in heightened product <br> sales and increased
+                popularity of games.
+            </li>
+
+            <ol>
+                <strong>International and National Recognizance:</strong>The names of sponsors will be consipicuously
+                showcased throughout televised games, granting them <br> an exceptional level of visibility and acknowledgment
+                on global scale
+            </ol>
+
+            <ol>
+                <strong>University partnership:</strong>By endorsing P.Bll as a university sport, sponsors can facilitate
+                campus involvement and fund the construction of indoor <br> cage courts. Consistent unversity chaimpionships
+                will increase the visibility of the sponsors even further.
+            </ol>
+
+
+        </ul>
+
+    </section>
+
+    
+
     <section>
         <h1 style="margin-left: 40%;">
             PowerBall Editions
@@ -671,7 +891,41 @@
     
             <div class="post-box mobile">
                 <video autoplay  controls  loop="" width="100%" height="70%">
-                    <source src="video17.mp4" type="video/mp4">
+                    <source src="video31.mp4" type="video/mp4">
+                </video>
+                <h2 class="category">Indoor Cage</h2>
+               
+    
+    
+            
+        </section>
+
+
+        <section class="post container">
+            <div style="padding-right: 10%;" class="post-box mobile">
+                <video autoplay  controls  loop="" width="100%" height="70%" >
+                    <source src="video22.mp4" type="video/mp4">
+                </video>
+                <h2 class="category">Royal Outdoor</h2>
+                
+                
+                
+            </div>
+    
+    
+            <div class="post-box tech">
+                <video autoplay  controls  loop="" width="110%" height="70%" style="margin-right: 10%;" >
+                    <source src="video15.mp4" type="video/mp4">
+                </video>
+    
+                <h2 class="category">Outdoor</h2>
+              
+            </div>
+    
+    
+            <div class="post-box mobile">
+                <video autoplay  controls  loop="" width="100%" height="70%">
+                    <source src="video31.mp4" type="video/mp4">
                 </video>
                 <h2 class="category">Indoor Cage</h2>
                
@@ -686,7 +940,7 @@
 
 
     <div class="footer container">
-        <p>&#169; TheAccurate All right Reserved</p>
+        <!-- <p>&#169; TheAccurate All right Reserved</p> -->
         <div class="social">
             <a href="#"><i class="bx bx1-facebook"></i></a>
             <a href="#"><i class="bx bx1-twitter"></i></a>
@@ -773,8 +1027,8 @@
             delay: 200,
         });
 
-        ScrollReveal().reveal('.home-text, .About-header', {origin:'top'});
-        ScrollReveal().reveal('.h2, .one, .media-coverage',{origin:'bottom'});
+        ScrollReveal().reveal('.home-text, .About-header, .pball, .gaining ', {origin:'top'});
+        ScrollReveal().reveal('.h2, .one, .media-coverage, .invest, .button' ,{origin:'bottom'});
         ScrollReveal().reveal('.home-subtitle, .two' ,{origin:'right'});
         ScrollReveal().reveal('.div .one',{origin:'left'});
 

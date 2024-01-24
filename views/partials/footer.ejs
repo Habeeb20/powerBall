@@ -1,1 +1,409 @@
-<h1>footer</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    
+    button {
+        font-size: 0.6rem;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        background-color: #1d1d1d;
+        color: aliceblue;
+        padding: 13px 30px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 0.3s;
+    }
+
+
+    button:hover {
+        background-color: #3a3833;
+
+
+    }
+
+
+    hr {
+        width: 30px;
+        height: 1px;
+        background-color: #fb774b;
+        margin-left: 49%;
+       
+    }
+    .containerr {
+        margin-left: 5%;
+    }
+    .row {
+        margin-left: 5%;
+        padding: 3%;
+    }
+
+    #new .row1 {
+        display: inline-flex;
+     
+    }
+
+
+    .row1 img {
+        width: 100%;
+        height: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        background-size: cover;
+        padding-bottom: -6%;
+      
+    }
+
+    .row1 img:nth-child(2){
+        width: 60%;
+    }
+
+    #new .one .details  {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s ease;
+        top: 170%;
+
+    }
+
+    
+    #new .one .detail h2:hover{
+        color: salmon;
+    }
+
+    #new .one .details button{
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #2a2a2a;
+        background: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid #2a2a2a;
+        padding:1px;
+        transform: translateY(70px);
+        transition: 0.3s ease;
+
+    }
+
+    .text-uppercase {
+        margin-top: 1px;
+    }
+
+    #new .one .details h2 {
+        font-weight: 800;
+        font-size: 1.2rem;
+    }
+
+    #new .one:nth-child(1) .details{
+        left: 6%;
+    }
+
+    #new .one:nth-child(2) .details{
+        left: 40%;
+    }
+
+    #new .one:nth-child(3) .details h2, button{
+        left: 80%;
+    }
+
+
+
+
+    #new .one .details button:hover{
+        border-bottom: 1px solid white;
+        color: #fff;
+    }
+    #featured hr{
+        padding: 6px;
+    }
+
+    .contain{
+        text-align: center;
+        align-items: center;
+        top: 0;
+        margin-top: 5px;
+     
+        padding-bottom: 5px;
+    }
+
+    .roww {
+        display: inline-flex;
+        padding: 5px;
+
+    }
+    .roww .product {
+        text-align: center;
+        padding: 15px;
+        cursor: pointer;
+        margin-bottom: 2rem;
+
+    }
+
+    .product img{
+        transition: 0.3s;
+
+    }
+
+    .product:hover img {
+        opacity: 0.7;
+    }
+
+    .product .buy-btn {
+        background-color: #fb774b;
+        transform: translateY(20px);
+        
+        opacity: 0;
+        transition: 0.3s all;
+    }
+
+    .product:hover .buy-btn {
+
+        transform: translateY(0);
+        opacity: 1;
+       
+    }
+
+
+    #banner {
+        background-image: url("banner.jpg");
+        width: 100%;
+        height: 60vh;
+        background-size: cover;
+        background-position: top 70px center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+
+    }
+    #banner h4 {
+        color: #d8d8d8;
+
+    }
+
+    #banner h1 {
+        color: #fff;
+    }
+
+    #banner button {
+        background-color: #fb774b;
+    }
+
+    .roww1 {
+        display: inline-flex;
+        padding: 5px;
+
+    }
+    #clothes {
+        padding: 16px;
+    }
+    .contain1 hr {
+        background-color: #fb774b;
+    }
+
+    .contain1 {
+        text-align: center;
+        align-items: center;
+        top: 0;
+        margin-top: 5px;
+     
+        padding-bottom: 5px;
+    }
+
+    
+    .roww1 {
+        display: inline-flex;
+        padding: 5px;
+
+    }
+    .roww1 .product1 {
+        text-align: center;
+        padding: 15px;
+        cursor: pointer;
+        margin-bottom: 2rem;
+
+    }
+
+    .product1 img{
+        transition: 0.3s;
+        width: 100%;
+        height: 55%;
+        
+
+    }
+
+    .product1:hover img {
+        opacity: 0.7;
+    }
+
+    .product1 .buy-btn {
+        background-color: #fb774b;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: 0.3s all;
+    }
+
+    .product1:hover .buy-btn {
+
+        transform: translateY(0);
+        opacity: 1;
+       
+    }
+
+
+    
+
+ #banner1 {
+        background-image: url("banner11.webp");
+        width: 100%;
+        height: 60vh;
+        background-size: cover;
+        background-position: top 70px center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        padding-top: 1%;
+
+    }
+    #banner h4 {
+        color: #d8d8d8;
+
+    }
+
+    #banner h1 {
+        color: #fff;
+    }
+
+    #banner button {
+        background-color: #fb774b;
+    }
+
+     .row {
+        display: inline-flex;
+        padding: 7px;
+    }
+
+    .footer-one {
+        padding: 65px;
+    }
+
+    .footer-one h5 {
+        padding-bottom: 10px;
+    }
+
+    .footer-one li {
+        list-style: none;
+        color: #999;
+        font-size: 0.8rem;
+    }
+
+    .footer-one li:hover {
+        color: #d8d8d8;
+    }
+
+    footer p {
+        color: #999;
+    }
+
+    .row11 {
+        
+        padding: 5px;
+    }
+    
+    .row11 img {
+        padding: 15px;
+        width: 30%;
+    }
+
+    footer {
+        background-color: #222222;
+    }
+
+    footer h5 {
+        color: #d8d8d8;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+
+    .row12 img {
+        margin-left: 10%;
+    }
+
+    .row12 p {
+        text-align: center;
+        
+    }
+
+
+
+</style>
+<body>
+    <footer class="foot">
+        <div class="row">
+            <div class="footer-one">
+                <img src="logo2.png" style="padding-bottom: 25px;">
+                <p>PowerBall, the best sport to showcase your skills</p>
+
+            </div>
+            <div class="footer-one">
+                <h5>featured</h5>
+                <ul>
+                    <li>PowerBall</li>
+                    
+                    
+                </ul>
+            </div>
+
+            <div class="footer-one">
+                <h5>Contact Us</h5>
+                <div>
+                    <h6 style="color: white;">ADDRESS</h6>
+                    <p> LAGOS</p>
+                </div>
+
+                <div>
+                    <h6 style="color: white;">PHONE</h6>
+                    <p>08165433468</p>
+                </div>
+
+                <div>
+                    <h6 style="color: white;">EMAIL</h6>
+                    <p>Pbllworld@gmail.com</p>
+                </div>
+              
+            </div>
+
+            <a href="#home"><button style="padding: 3%; border-radius:15%; background-color:white; color:black">Go to The Top</button></a>
+
+
+           
+
+        </div>
+
+        <div class="copyright">
+            <div class="row12">
+                <img src="payment.png" alt="">
+                <p>PowerBall @ 2024. All Rights are reserved</p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
