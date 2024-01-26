@@ -5,9 +5,6 @@ const home = async (req, res) => {
 
 }
 
-const home1 = async( req, res) => {
-    res.render("home1")
-}
 
 const invest = async(req, res) => {
     res.render("invest", {
@@ -21,26 +18,11 @@ const postInvest = async(req, res) => {
 
     try {
         const user = await User.create({fullname, email, phone, location})
-        if(user){
-            res.render("profile", {
-                _id: req.params.id,
-                fullname:req.body.fullname,
-                email : req.body.email,
-                phone :req.body.phone,
-                location: req.body.location,
-    
-    
-                user:user,
-                fullname:fullname,
-                email:email,
-                phone:phone,
-                location: location,
-                message:'your details has been registered'
-    
-            })
-        } else {
-            console.log("there is error")
+        if(!user){
+            res.redirect("/invest")
         }
+        res.render("profile")
+      
     } catch (error) {
          console.log(error)
         
@@ -80,5 +62,5 @@ module.exports = {
     invest,
     postInvest,
     profile,
-    home1
+    
 }

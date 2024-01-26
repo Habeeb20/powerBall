@@ -7,7 +7,7 @@ const { home, invest, postInvest, profile, home1 } = require("../controller/user
 const router = express.Router();
 
 router.get("/", home);
-router.get("/home1", home1)
+
 router.get("/invest",   checkUser,  invest);
 router.post("/invest", postInvest);
 router.get("/profile", profile)

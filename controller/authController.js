@@ -7,7 +7,7 @@ const handleErrors = (err) => {
     let errors = {username: '', password: ''}
 
     if(err.message === 'incorrect username'){
-        errors.username = 'the username is not registered';
+        errors.username = 'the username is not registered, please signup';
     }
 
 
