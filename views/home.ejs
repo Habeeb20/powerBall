@@ -512,8 +512,11 @@
         *{
             z-index: 0;
             box-sizing: border-box;
+            overflow: scroll;
+            
             
         }
+     
    
         .login{
             visibility: hidden;
@@ -525,17 +528,43 @@
             display: list-item;
             font-size: small;
         }
+
+        #edition {
+            display: list-item;
+            font-size: small;
+        }
+
+        .sponsor{
+            padding-bottom: -13%;
+            margin-bottom: -30%;
+        }
+        .pball{
+            margin-left: 1px;
+            padding-left: -12%;
+        }
         
 
         .invest {
             padding-top: 45%;
             padding-bottom: 45%;
+            overflow: hidden;
             width: 60%;
+           
          
+        }
+
+        .circle {
+            visibility: hidden;
         }
         .gaining h1 {
             margin-left: 2%;
             padding-left: -3%;
+        }
+
+        .edition{
+            display: list-item;
+            font-size: small;
+            overflow:hidden;
         }
 
     }
@@ -757,7 +786,7 @@
                 interview session <br>
             </a>
             <span class="post-date">19 june 2022</span>
-            <p>Delta state television had an interview session with one of the stakeholders <br>
+            <p>Delta state television had an interview session with a sport presenter <br>
 
             </p>
             <div class="profile">
@@ -870,9 +899,9 @@
 
     <h1 class="sponsor" style="margin-left: 34%;">A call for a sponsor</h1>
     <section class="invest">
-       
-        <span style="--i: 0"></span>
-        <span style="--i: 1"></span>
+       <div class="circle">
+        <span  style="--i: 1"></span>
+        <span  style="--i: 0"></span>
         <span style="--i: 2"></span>
         <span style="--i: 3"></span>
         <span style="--i: 4"></span>
@@ -924,6 +953,9 @@
         <span style="--i: 50"> </span>
         <span style="--i: 51"> </span>
 
+
+       </div>
+        
        
         <h4 class="pball">P.Bll has the opportunity to attract sponsors who wish
             to associate their brand with this innovative and exciting
@@ -978,19 +1010,19 @@
 
     
 
-    <section>
+    <section class="edition">
         <h1 style="margin-left: 40%;">
             PowerBall Editions
         </h1>
 
         <div class="post-filter container">
             <span class="filter-item active-filter" data-filter="all">All</span>
-            <span class="filter-item" data-filter="design">Royal Outdoor </span>
+            <span class="filter-item" data-filter="design">Indoor Cage </span>
             <span class="filter-item" data-filter="tech">Outdoor Edition</span> 
-            <span class="filter-item" data-filter="mobile">Indoor Cage</span>
+            <span class="filter-item" data-filter="mobile">Royal Outdoor</span>
             
         </div>
-        <section class="post container">
+        <section id="edition" class="post container">
             <div style="padding-right: 10%;" class="post-box mobile">
                 <video autoplay  controls  loop="" width="100%" height="70%" >
                     <source src="video10.mp4" type="video/mp4">
@@ -1024,7 +1056,7 @@
         </section>
 
 
-        <section class="post container">
+        <section id="edition" class="post container">
             <div style="padding-right: 10%;" class="post-box mobile">
                 <video autoplay  controls  loop="" width="100%" height="70%" >
                     <source src="video22.mp4" type="video/mp4">
@@ -1150,7 +1182,7 @@
             delay: 200,
         });
 
-        ScrollReveal().reveal('.home-text, .About-header, .pball, .gaining ', {origin:'top'});
+        ScrollReveal().reveal('.home-text, .About-header, .pball, .gaining, .sponsor ', {origin:'top'});
         ScrollReveal().reveal('.h2, .one, .media-coverage, .invest, .button' ,{origin:'bottom'});
         ScrollReveal().reveal('.home-subtitle, .two' ,{origin:'right'});
         ScrollReveal().reveal('.div .one',{origin:'left'});

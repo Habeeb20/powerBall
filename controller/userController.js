@@ -17,11 +17,10 @@ const postInvest = async(req, res) => {
     const {fullname, email, phone, location} = req.body
 
     try {
+
         const user = await User.create({fullname, email, phone, location})
-        if(user){
-            res.render("profile")
-        }
-        res.redirect("/invest")
+        res.status(200).json(user)
+      
       
     } catch (error) {
          console.log(error)
