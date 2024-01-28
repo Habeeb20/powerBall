@@ -509,6 +509,34 @@
 
     }
     @media (max-width:450px) {
+        *{
+            z-index: 0;
+            box-sizing: border-box;
+            
+        }
+   
+        .login{
+            visibility: hidden;
+        }
+        #showSponsor{
+            visibility: visible;
+        }
+        #Pcontainer{
+            display: list-item;
+            font-size: small;
+        }
+        
+
+        .invest {
+            padding-top: 45%;
+            padding-bottom: 45%;
+            width: 60%;
+         
+        }
+        .gaining h1 {
+            margin-left: 2%;
+            padding-left: -3%;
+        }
 
     }
 
@@ -516,6 +544,7 @@
         body{
             overflow-x: hidden;
         }
+
       
 
     }
@@ -539,7 +568,7 @@
     <header>
         <div class="nav container">
             
-            <a href="/login" class="login">sponsor</a>
+            <a href="/login" id="showSponsor" class="login">sponsor</a>
            
                 
 
@@ -585,7 +614,7 @@
         <span class="filter-item" data-filter="mobile">Pictures</span>
         
     </div>
-    <section class="post container">
+    <section id="Pcontainer" class="post container">
         <div style="padding-right: 10%;" class="post-box mobile">
             <img style="width: 140%;" src="img1.jpg" alt="" class="post-img">
             <h2 class="category">Picture</h2>
@@ -650,7 +679,7 @@
 
 
 
-    <section class="post container">
+    <section id="Pcontainer" class="post container">
         <div class="post-box design">
             <video autoplay  controls  loop="" width="80%" height="50%" >
                 <source src="video30.mp4" type="video/mp4">
@@ -717,7 +746,7 @@
     
 
 
-    <section class="post container">
+    <section id="Pcontainer" class="post container">
         <div class="post-box design">
             <video autoplay  controls  loop="" width="80%" height="50%" >
                 <source style="width: 50%;" src="video39.mp4" type="video/mp4">
@@ -983,7 +1012,7 @@
             </div>
     
     
-            <div class="post-box mobile">
+            <div class="post-box design">
                 <video autoplay  controls  loop="" width="100%" height="70%">
                     <source src="video36.mp4" type="video/mp4">
                 </video>
@@ -1017,7 +1046,7 @@
             </div>
     
     
-            <div class="post-box mobile">
+            <div class="post-box design">
                 <video autoplay  controls  loop="" width="100%" height="70%">
                     <source src="video3.mp4" type="video/mp4">
                 </video>
@@ -1113,7 +1142,7 @@
 
         let headerr = document.querySelector('header');
 
-        header.classList.toggle('sticky', window.scrollY > 100);
+        header.classList.toggle('sticky', window.scrollY > 50);
         ScrollReveal ({
             //reset:true,
             distance: '100px',
